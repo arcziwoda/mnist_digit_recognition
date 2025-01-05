@@ -1,19 +1,16 @@
 .PHONY: run clean install
 
-VENV_DIR = .venv
+ENTRYPOINT = digit-recognition
 
-ENTRYPOINT = -m digit_recognition.app
+PYTHON_VERSION = 3.11.10
 
-run: $(VENV_DIR)/bin/activate
-	$(VENV_DIR)/bin/python $(ENTRYPOINT)
+run:
+	poetry run $(ENTRYPOINT)
 
-install: $(VENV_DIR)/bin/activate
-
-$(VENV_DIR)/bin/activate: requirements.txt
-	python3 -m venv $(VENV_DIR)
-	$(VENV_DIR)/bin/pip install --upgrade pip
-	$(VENV_DIR)/bin/pip install -r requirements.txt
+install:
+	poetry env use $(PYTHON_VERSION)
+	poetry install
 
 clean:
-	rm -rf $(VENV_DIR)
+	poetry env remove --all
 

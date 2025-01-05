@@ -16,6 +16,7 @@ Ensure you have the following installed:
 
 - Python 3.11
 - Make (for `Makefile` automation)
+- Poetry
 
 ## Installation
 
@@ -32,11 +33,6 @@ Ensure you have the following installed:
    make install
    ```
 
-   This will:
-
-   - Create a virtual environment in the `.venv` directory.
-   - Install required dependencies from `requirements.txt`.
-
 ## Usage
 
 To run the application, simply execute the following command:
@@ -44,11 +40,6 @@ To run the application, simply execute the following command:
 ```bash
 make run
 ```
-
-This will:
-
-- Activate the virtual environment.
-- Run the `number_recognition/app.py` entry point to train the model, evaluate metrics, and launch the interactive GUI.
 
 ## Metrics
 
