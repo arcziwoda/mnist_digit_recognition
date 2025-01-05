@@ -1,9 +1,9 @@
-from ml.data_loader import load_data
-from ml.inference import make_predictions
-from ml.train import train_model
-from ml.metrics import calculate_metrics, display_metrics
-from ml.model import SimpleNN
-from gui.gui import display_predictions
+from digit_recognition.ml.data_loader import load_data
+from digit_recognition.ml.inference import make_predictions
+from digit_recognition.ml.train import train_model
+from digit_recognition.ml.metrics import calculate_metrics, display_metrics
+from digit_recognition.ml.model import SimpleNN
+from digit_recognition.gui.gui import display_predictions
 
 
 def run_app():

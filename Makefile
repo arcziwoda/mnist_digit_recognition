@@ -2,7 +2,7 @@
 
 VENV_DIR = .venv
 
-ENTRYPOINT = digit_recognition/app.py
+ENTRYPOINT = -m digit_recognition.app
 
 run: $(VENV_DIR)/bin/activate
 	$(VENV_DIR)/bin/python $(ENTRYPOINT)
