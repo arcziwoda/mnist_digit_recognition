@@ -35,10 +35,47 @@ Ensure you have the following installed:
 
 ## Usage
 
-To run the application, simply execute the following command:
+The application provides several commands using the `typer` CLI. Below are the available commands and their usage:
+
+### 1. **Train the Model**
+
+Train a new model on the MNIST dataset and save it to `models/model.pth`.
 
 ```bash
-make run
+digit-recognition train --batch-size <BATCH_SIZE> --epochs <EPOCHS>
+```
+
+- `--batch-size`: The batch size for training (default: 64).
+- `--epochs`: The number of epochs for training (default: 5).
+
+Example:
+
+```bash
+digit-recognition train --batch-size 128 --epochs 10
+```
+
+### 2. **View Metrics**
+
+Evaluate the model on the test dataset and display standard metrics such as accuracy, precision, recall, and F1-score.
+
+```bash
+digit-recognition metrics
+```
+
+### 3. **Visualize Predictions**
+
+Launch an interactive GUI to visualize predictions made by the model.
+
+```bash
+digit-recognition view
+```
+
+- `--mismatched`: Optional flag to show only mismatched predictions (default: `False`).
+
+Example:
+
+```bash
+python app.py view --mismatched
 ```
 
 ## Metrics

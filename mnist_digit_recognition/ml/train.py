@@ -2,11 +2,11 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-def train_model(model, data_loader):
+def train_model(model, data_loader, epochs=5):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     print("Running training...")
-    for epoch in range(5):
+    for epoch in range(epochs):
         model.train()
         running_loss = 0.0
         for images, labels in data_loader:

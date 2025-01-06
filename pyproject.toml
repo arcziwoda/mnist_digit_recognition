@@ -32,6 +32,7 @@ sympy = "1.13.1"
 threadpoolctl = "3.5.0"
 torchvision = "0.20.1"
 typing-extensions = "4.12.2"
+typer = "^0.15.1"
 
 
 [build-system]
