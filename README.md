@@ -75,7 +75,7 @@ digit-recognition view
 Example:
 
 ```bash
-python app.py view --mismatched
+digit-recognition view --mismatched
 ```
 
 ## Metrics
